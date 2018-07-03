@@ -11,19 +11,21 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 0
+  number: 1
   skip: True  # [win]
 
 requirements:
   build:
+    - make
+    - {{ compiler('fortran') }}
+    - {{ compiler('c') }}
+  host:
     - python
     - pip
     - mpich
     - openmp
     - libnetcdf
     - cffi ==1.9.1
-    - toolchain
-    - make
   run:
     - python
     - mpich

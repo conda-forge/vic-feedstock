@@ -19,14 +19,16 @@ globally.
 Current build status
 ====================
 
-Linux: [![Circle CI](https://circleci.com/gh/conda-forge/vic-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/vic-feedstock)
-OSX: [![TravisCI](https://travis-ci.org/conda-forge/vic-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/vic-feedstock)
-Windows: ![](https://cdn.rawgit.com/conda-forge/conda-smithy/90845bba35bec53edac7a16638aa4d77217a3713/conda_smithy/static/disabled.svg)
+[![Linux](https://img.shields.io/circleci/project/github/conda-forge/vic-feedstock/master.svg?label=Linux)](https://circleci.com/gh/conda-forge/vic-feedstock)
+[![OSX](https://img.shields.io/travis/conda-forge/vic-feedstock/master.svg?label=macOS)](https://travis-ci.org/conda-forge/vic-feedstock)
+![Windows disabled](https://img.shields.io/badge/Windows-disabled-lightgrey.svg)
 
 Current release info
 ====================
-Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/vic/badges/version.svg)](https://anaconda.org/conda-forge/vic)
-Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/vic/badges/downloads.svg)](https://anaconda.org/conda-forge/vic)
+
+| Name | Downloads | Version | Platforms |
+| --- | --- | --- | --- |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-vic-green.svg)](https://anaconda.org/conda-forge/vic) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/vic.svg)](https://anaconda.org/conda-forge/vic) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/vic.svg)](https://anaconda.org/conda-forge/vic) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/vic.svg)](https://anaconda.org/conda-forge/vic) |
 
 Installing vic
 ==============
