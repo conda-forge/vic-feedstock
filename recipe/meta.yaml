@@ -9,6 +9,8 @@ package:
 source:
   url: https://github.com/UW-Hydro/{{ name }}/archive/{{ name }}.{{ version }}.tar.gz
   sha256: {{ sha256 }}
+  patches:
+    - cc-env.patch  # backport https://github.com/UW-Hydro/VIC/pull/894
 
 build:
   number: 2
