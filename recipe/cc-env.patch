@@ -1,0 +1,23 @@
+From a50ffeff5b5c8b3ec629f21dec22b8047d639478 Mon Sep 17 00:00:00 2001
+From: Min RK <benjaminrk@gmail.com>
+Date: Tue, 24 Sep 2019 09:47:06 +0200
+Subject: [PATCH] cffi headers: respect $CC if defined
+
+default behavior is unchanged, but fixes builds on e.g. conda where compilers have funky names
+---
+ vic/drivers/python/setup.py | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/vic/drivers/python/setup.py b/vic/drivers/python/setup.py
+index 68e00de93..19d8ce13e 100644
+--- a/vic/drivers/python/setup.py
++++ b/vic/drivers/python/setup.py
+@@ -124,7 +124,7 @@ def make_cffi_headers():
+                  'zwtvmoist_zwt',
+                  'zwtvmoist_moist']
+ 
+-    args = ['gcc', '-std=c99', '-E',
++    args = [os.environ.get('CC') or 'gcc', '-std=c99', '-E',
+             '-P', os.path.join(vic_root_abs_path, 'vic', 'drivers',
+                                'python', 'src', 'globals.c'),
+             '-I%s' % os.path.join(vic_root_abs_path, 'vic', 'drivers',

@@ -9,9 +9,12 @@ package:
 source:
   url: https://github.com/UW-Hydro/{{ name }}/archive/{{ name }}.{{ version }}.tar.gz
   sha256: {{ sha256 }}
+  patches:
+    - cc-env.patch  # backport https://github.com/UW-Hydro/VIC/pull/894
+    - ffi-fix.patch  # backport https://github.com/UW-Hydro/VIC/commit/1a34c2cfcae9d09c1f7f2a8aaaeaf24edab4c21c
 
 build:
-  number: 1
+  number: 2
   skip: True  # [win]
 
 requirements:
@@ -25,7 +28,7 @@ requirements:
     - mpich
     - openmp
     - libnetcdf
-    - cffi ==1.9.1
+    - cffi
   run:
     - python
     - mpich
