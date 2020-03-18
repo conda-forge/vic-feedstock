@@ -14,7 +14,7 @@ source:
     - ffi-fix.patch  # backport https://github.com/UW-Hydro/VIC/commit/1a34c2cfcae9d09c1f7f2a8aaaeaf24edab4c21c
 
 build:
-  number: 4
+  number: 5
   skip: True  # [win]
 
 requirements:
